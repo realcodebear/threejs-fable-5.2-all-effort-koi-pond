@@ -1,0 +1,464 @@
+{
+ "fable-low": {
+  "run": "fable-low",
+  "tool_calls": 35,
+  "shots": 5,
+  "images_viewed": 4,
+  "in_tok": 82754,
+  "cached_tok": 676484,
+  "out_tok": 64336,
+  "reason_tok": 0,
+  "cost_usd": 4.032640799999999,
+  "turns": 36,
+  "status": "done",
+  "model": "claude-fable-5-2",
+  "effort": "low",
+  "duration_s": 695,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 19,
+    "bytes": 581
+   },
+   {
+    "path": "main.js",
+    "lines": 961,
+    "bytes": 50899
+   }
+  ],
+  "lines": 980,
+  "bytes": 51480,
+  "has_index": true
+ },
+ "fable-medium": {
+  "run": "fable-medium",
+  "tool_calls": 92,
+  "shots": 16,
+  "images_viewed": 14,
+  "in_tok": 161950,
+  "cached_tok": 2610170,
+  "out_tok": 118692,
+  "reason_tok": 0,
+  "cost_usd": 7.860562,
+  "turns": 93,
+  "status": "done",
+  "model": "claude-fable-5-2",
+  "effort": "medium",
+  "duration_s": 1326,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 19,
+    "bytes": 604
+   },
+   {
+    "path": "js/common.js",
+    "lines": 118,
+    "bytes": 6143
+   },
+   {
+    "path": "js/fish.js",
+    "lines": 272,
+    "bytes": 12837
+   },
+   {
+    "path": "js/lanterns.js",
+    "lines": 151,
+    "bytes": 8595
+   },
+   {
+    "path": "js/main.js",
+    "lines": 214,
+    "bytes": 10790
+   },
+   {
+    "path": "js/scenery.js",
+    "lines": 636,
+    "bytes": 34152
+   },
+   {
+    "path": "js/water.js",
+    "lines": 154,
+    "bytes": 6532
+   }
+  ],
+  "lines": 1564,
+  "bytes": 79653,
+  "has_index": true
+ },
+ "fable-high": {
+  "run": "fable-high",
+  "tool_calls": 189,
+  "shots": 27,
+  "images_viewed": 23,
+  "in_tok": 327196,
+  "cached_tok": 16054112,
+  "out_tok": 239118,
+  "reason_tok": 0,
+  "cost_usd": 18.009574399999998,
+  "turns": 190,
+  "status": "done",
+  "model": "claude-fable-5-2",
+  "effort": "high",
+  "duration_s": 2634,
+  "files": [
+   {
+    "path": "common.js",
+    "lines": 172,
+    "bytes": 8108
+   },
+   {
+    "path": "extras.js",
+    "lines": 128,
+    "bytes": 5824
+   },
+   {
+    "path": "garden.js",
+    "lines": 615,
+    "bytes": 29595
+   },
+   {
+    "path": "index.html",
+    "lines": 20,
+    "bytes": 651
+   },
+   {
+    "path": "koi.js",
+    "lines": 416,
+    "bytes": 21168
+   },
+   {
+    "path": "lanterns.js",
+    "lines": 201,
+    "bytes": 10386
+   },
+   {
+    "path": "lily.js",
+    "lines": 211,
+    "bytes": 10408
+   },
+   {
+    "path": "main.js",
+    "lines": 215,
+    "bytes": 10487
+   },
+   {
+    "path": "sky.js",
+    "lines": 90,
+    "bytes": 3840
+   },
+   {
+    "path": "water.js",
+    "lines": 326,
+    "bytes": 14351
+   }
+  ],
+  "lines": 2394,
+  "bytes": 114818,
+  "has_index": true
+ },
+ "fable-xhigh": {
+  "run": "fable-xhigh",
+  "tool_calls": 286,
+  "shots": 39,
+  "images_viewed": 33,
+  "in_tok": 521338,
+  "cached_tok": 41702598,
+  "out_tok": 384841,
+  "reason_tok": 0,
+  "cost_usd": 32.0736476,
+  "turns": 288,
+  "status": "done",
+  "model": "claude-fable-5-2",
+  "effort": "xhigh",
+  "duration_s": 4397,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 17,
+    "bytes": 617
+   },
+   {
+    "path": "js/common.js",
+    "lines": 222,
+    "bytes": 10794
+   },
+   {
+    "path": "js/flora.js",
+    "lines": 676,
+    "bytes": 34637
+   },
+   {
+    "path": "js/fx.js",
+    "lines": 80,
+    "bytes": 4161
+   },
+   {
+    "path": "js/koi.js",
+    "lines": 496,
+    "bytes": 25223
+   },
+   {
+    "path": "js/lanterns.js",
+    "lines": 216,
+    "bytes": 11781
+   },
+   {
+    "path": "js/lilies.js",
+    "lines": 202,
+    "bytes": 9343
+   },
+   {
+    "path": "js/main.js",
+    "lines": 263,
+    "bytes": 12338
+   },
+   {
+    "path": "js/sky.js",
+    "lines": 193,
+    "bytes": 7827
+   },
+   {
+    "path": "js/stones.js",
+    "lines": 178,
+    "bytes": 8714
+   },
+   {
+    "path": "js/terrain.js",
+    "lines": 120,
+    "bytes": 5453
+   },
+   {
+    "path": "js/water.js",
+    "lines": 345,
+    "bytes": 16851
+   }
+  ],
+  "lines": 3008,
+  "bytes": 147739,
+  "has_index": true
+ },
+ "fable-max": {
+  "run": "fable-max",
+  "tool_calls": 399,
+  "shots": 70,
+  "images_viewed": 45,
+  "in_tok": 1128181,
+  "cached_tok": 70056837,
+  "out_tok": 491214,
+  "reason_tok": 0,
+  "cost_usd": 51.70823140000002,
+  "turns": 400,
+  "status": "done",
+  "model": "claude-fable-5-2",
+  "effort": "max",
+  "duration_s": 6078,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 16,
+    "bytes": 448
+   },
+   {
+    "path": "js/common.js",
+    "lines": 318,
+    "bytes": 14430
+   },
+   {
+    "path": "js/debug.js",
+    "lines": 17,
+    "bytes": 1255
+   },
+   {
+    "path": "js/flora.js",
+    "lines": 746,
+    "bytes": 36751
+   },
+   {
+    "path": "js/koi.js",
+    "lines": 557,
+    "bytes": 27555
+   },
+   {
+    "path": "js/lanterns.js",
+    "lines": 362,
+    "bytes": 16729
+   },
+   {
+    "path": "js/lighting.js",
+    "lines": 254,
+    "bytes": 12389
+   },
+   {
+    "path": "js/lilies.js",
+    "lines": 345,
+    "bytes": 15527
+   },
+   {
+    "path": "js/main.js",
+    "lines": 374,
+    "bytes": 18417
+   },
+   {
+    "path": "js/noisetex.js",
+    "lines": 95,
+    "bytes": 4600
+   },
+   {
+    "path": "js/particles.js",
+    "lines": 68,
+    "bytes": 3171
+   },
+   {
+    "path": "js/post.js",
+    "lines": 193,
+    "bytes": 10089
+   },
+   {
+    "path": "js/sky.js",
+    "lines": 173,
+    "bytes": 7683
+   },
+   {
+    "path": "js/stones.js",
+    "lines": 190,
+    "bytes": 8704
+   },
+   {
+    "path": "js/terrain.js",
+    "lines": 133,
+    "bytes": 6079
+   },
+   {
+    "path": "js/tree.js",
+    "lines": 314,
+    "bytes": 14808
+   },
+   {
+    "path": "js/water.js",
+    "lines": 429,
+    "bytes": 20485
+   },
+   {
+    "path": "style.css",
+    "lines": 23,
+    "bytes": 321
+   }
+  ],
+  "lines": 4607,
+  "bytes": 219441,
+  "has_index": true
+ },
+ "opus-high": {
+  "run": "opus-high",
+  "tool_calls": 172,
+  "shots": 26,
+  "images_viewed": 23,
+  "in_tok": 260439,
+  "cached_tok": 16521848,
+  "out_tok": 176738,
+  "reason_tok": 0,
+  "cost_usd": 8.9219056,
+  "turns": 173,
+  "status": "done",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "duration_s": 2083,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 19,
+    "bytes": 651
+   },
+   {
+    "path": "js/debug.js",
+    "lines": 10,
+    "bytes": 481
+   },
+   {
+    "path": "js/koi.js",
+    "lines": 342,
+    "bytes": 14970
+   },
+   {
+    "path": "js/lanterns.js",
+    "lines": 297,
+    "bytes": 14074
+   },
+   {
+    "path": "js/main.js",
+    "lines": 241,
+    "bytes": 9697
+   },
+   {
+    "path": "js/mist.js",
+    "lines": 50,
+    "bytes": 1824
+   },
+   {
+    "path": "js/plants.js",
+    "lines": 696,
+    "bytes": 31210
+   },
+   {
+    "path": "js/pond.js",
+    "lines": 124,
+    "bytes": 4924
+   },
+   {
+    "path": "js/rocks.js",
+    "lines": 141,
+    "bytes": 6079
+   },
+   {
+    "path": "js/sky.js",
+    "lines": 94,
+    "bytes": 4345
+   },
+   {
+    "path": "js/util.js",
+    "lines": 130,
+    "bytes": 4897
+   },
+   {
+    "path": "js/water.js",
+    "lines": 225,
+    "bytes": 9807
+   }
+  ],
+  "lines": 2369,
+  "bytes": 102959,
+  "has_index": true
+ },
+ "astra-high": {
+  "run": "astra-high",
+  "tool_calls": 18,
+  "shots": 7,
+  "images_viewed": 0,
+  "in_tok": 51552,
+  "cached_tok": 990592,
+  "out_tok": 18079,
+  "reason_tok": 4463,
+  "cost_usd": null,
+  "turns": null,
+  "status": "done",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "duration_s": 432,
+  "files": [
+   {
+    "path": "index.html",
+    "lines": 12,
+    "bytes": 574
+   },
+   {
+    "path": "scene.js",
+    "lines": 286,
+    "bytes": 27356
+   }
+  ],
+  "lines": 298,
+  "bytes": 27930,
+  "has_index": true
+ }
+}

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Koi Pond Test Hub</title><link rel="stylesheet" href="_vendor/fonts/fonts.css"><style>:root{color-scheme:dark;--bg:#131417;--panel:#1e2025;--panel2:#272a30;--fg:#eef0f3;--soft:#cfd3da;--muted:#949ba6;--acc:#ff8a1f;
+--display:"Space Grotesk",Inter,system-ui,sans-serif;--body:Inter,system-ui,-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);-webkit-font-smoothing:antialiased}a{color:inherit}
+.in{max-width:1240px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+header{padding:44px 0 10px}.eb{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1.02;margin:10px 0 8px}
+.lede{color:var(--soft);max-width:64ch;margin:0}h2{font-family:var(--display);font-size:1.3rem;margin:38px 0 14px}
+.sites{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.site{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--panel);border-radius:14px;padding:18px 20px;text-decoration:none}
+.site b{font-family:var(--display);font-size:1.15rem;display:block}.site span{color:var(--muted);font-size:.88rem}
+.site .go{font-family:var(--mono);font-size:.78rem;background:var(--fg);color:#111;padding:7px 12px;border-radius:999px;white-space:nowrap}
+.site.off{opacity:.55;pointer-events:none}.site.off .go{background:var(--panel2);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;aspect-ratio:16/9;background:#0c0d0f;display:block;overflow:hidden}.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.thumb .st{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:.7rem;background:rgba(0,0,0,.65);padding:4px 9px;border-radius:999px}
+.thumb .empty{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.9rem}
+.body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:8px;flex:1}
+.name{font-family:var(--display);font-weight:600;font-size:1.08rem;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.grp{font-size:.78rem;color:var(--muted)}
+.nums{display:flex;flex-wrap:wrap;gap:6px}.nums span{font-family:var(--mono);font-size:.72rem;background:var(--bg);color:var(--soft);padding:4px 8px;border-radius:7px}
+.acts{display:flex;gap:8px;margin-top:auto;padding-top:4px}.btn{font-size:.84rem;text-decoration:none;background:var(--panel2);padding:8px 12px;border-radius:9px;color:var(--soft)}
+.btn.p{background:var(--fg);color:#111;font-weight:600}.btn.off{opacity:.4;pointer-events:none}
+.live{animation:pulse 1.6s infinite}@keyframes pulse{50%{opacity:.45}}
+footer{color:var(--muted);font-size:.82rem;padding:40px 0}
+@media(max-width:640px){.sites{grid-template-columns:1fr}}
+</style></head><body><div class="in">
+<header><div class="eb">Koi pond test · three.js · one prompt</div><h1>Koi Pond Test Hub</h1>
+<p class="lede">Seven runs of the same prompt. Five Claude Fable 5.2 effort levels, plus Claude Opus 5.5 and GPT-6 Astra at high. Open any scene full screen and use ← → to flip between them.</p></header>
+<h2>Comparison sites</h2><div class="sites" id="sites"></div>
+<h2>All scenes</h2><div class="grid" id="grid"></div>
+<footer>Hosted copy of the local test hub. Every scene is the model&#39;s own output. Source: <a href="https://github.com/realcodebear/threejs-fable-5.2-all-effort-koi-pond">github.com/realcodebear/threejs-fable-5.2-all-effort-koi-pond</a></footer></div>
+<script>
+const f={min:s=>s==null?null:Math.round(s/60)+' min',usd:v=>v==null?null:'$'+v.toFixed(2),k:v=>!v?null:v>=1e3?Math.round(v/1e3)+'k tok':v+' tok'};
+function draw(d){
+  document.getElementById('sites').innerHTML=d.sites.map(s=>`<a class="site ${s.ready?'':'off'}" href="${s.href}"><div><b>${s.name}</b><span>${s.sub}</span></div><span class="go">${s.ready?'Open →':'Building…'}</span></a>`).join('');
+  document.getElementById('grid').innerHTML=d.runs.map(r=>{const done=r.status==='done',run=r.status==='running';
+    const st=done?'Done':run?'<span class=live>● Running</span>':r.status;
+    const nums=[f.min(r.dur),f.usd(r.cost),f.k(r.out),r.lines?r.lines.toLocaleString()+' lines':null,r.shots?r.shots+' shots':null].filter(Boolean).map(x=>`<span>${x}</span>`).join('');
+    return `<div class="card" style="--c:${r.color}"><a class="thumb" href="${r.ready?'view.html?r='+r.id:'#'}">${r.still?`<img src="${r.still}?v=${Date.now()>>15}" alt="${r.label}" loading="lazy">`:'<div class=empty>No screenshot yet</div>'}<span class="st">${st}</span></a>
+    <div class="body"><div class="name"><span class="dot"></span>${r.label}</div><div class="grp">${r.group}</div><div class="nums">${nums}</div>
+    <div class="acts"><a class="btn p ${r.ready&&done?'':'off'}" href="view.html?r=${r.id}">Open full screen</a><a class="btn ${r.notes?'':'off'}" href="${r.id}/NOTES.md" target="_blank">Notes</a></div></div></div>`}).join('');
+}
+const load=()=>fetch('hub.json?'+Date.now()).then(r=>r.json()).then(draw).catch(()=>{});load();setInterval(load,30000);
+</script></body></html>

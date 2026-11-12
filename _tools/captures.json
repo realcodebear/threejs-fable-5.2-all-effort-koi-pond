@@ -1,0 +1,30 @@
+{
+ "fable-low": {
+  "fps": 60,
+  "errors": []
+ },
+ "fable-medium": {
+  "fps": 60,
+  "errors": []
+ },
+ "fable-high": {
+  "fps": 59,
+  "errors": []
+ },
+ "fable-xhigh": {
+  "fps": 46,
+  "errors": []
+ },
+ "fable-max": {
+  "fps": 50,
+  "errors": []
+ },
+ "opus-high": {
+  "fps": 60,
+  "errors": []
+ },
+ "astra-high": {
+  "fps": 60,
+  "errors": []
+ }
+}
